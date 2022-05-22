@@ -8,6 +8,8 @@ assume we have 2 URLs :
 
 Here is how we define it in code:
 
+```go
+
 conf := []PathLimiter{
   {
     Path: "/test/max1",
@@ -18,9 +20,12 @@ conf := []PathLimiter{
     Max:  float64(2),
   },
 }
+```
 
 Use GatewayLimitMiddleware make ratelimiter
 
+```go
 for _, c := range conf {
   e.GET(c.Path, TestHandler, GatewayLimitMiddleware(c.Max))
 }
+```
