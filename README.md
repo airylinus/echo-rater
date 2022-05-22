@@ -12,12 +12,12 @@ Here is how we define it in code:
 
 conf := []PathLimiter{
   {
-    Path: "/test/max1",
+    Path: "/test/maxQPS_10",
     Max:  float64(10),
   },
   {
-    Path: "/test/max2",
-    Max:  float64(2),
+    Path: "/test/maxQPS_20",
+    Max:  float64(20),
   },
 }
 ```
